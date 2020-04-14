@@ -72,11 +72,11 @@ class PenyewaController extends Controller
         }
 
         $ubah=Penyewa::where('id',$id)->update([
-            'nama_penyewa'=>$req->nama_penyewa,
-            'alamat'=>$req->alamat,
-            'telp'=>$req->telp,
-            'no_ktp'=>$req->no_ktp,
-            'foto'=>$req->foto
+            'nama_penyewa'=>$request->nama_penyewa,
+            'alamat'=>$request->alamat,
+            'telp'=>$request->telp,
+            'no_ktp'=>$request->no_ktp,
+            'foto'=>$request->foto
         ]);
         $status=1;
         $message="Penyewa Berhasil Diubah";
